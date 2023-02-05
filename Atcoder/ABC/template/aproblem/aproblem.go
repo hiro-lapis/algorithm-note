@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 	"strconv"
 )
@@ -45,6 +46,10 @@ func main() {
 	wfp := os.Stdout
 	scanner := getScanner(fp)
 	writer := bufio.NewWriter(wfp)
-	defer writer.Flush()
 
+	// receive input
+	v := getNextInt(scanner)
+	fmt.Println(v)
+
+	defer writer.Flush()
 }
