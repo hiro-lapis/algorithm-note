@@ -48,8 +48,31 @@ func main() {
 	writer := bufio.NewWriter(wfp)
 
 	// receive input
-	v := getNextInt(scanner)
-	fmt.Println(v)
+	t := getNextInt(scanner)
+	fmt.Println(t)
+	for i := 0; i < t; i++ {
+		n := getNextInt(scanner)
+		d := getNextInt(scanner)
+		k := getNextInt(scanner)
+
+		l := make([]bool, n)
+		l[0] = true
+
+		current := 0
+		for k > 0 {
+			if k == 0 {
+				break
+			}
+			current := (current + d) % n
+			if l[current] {
+				current++
+				continue
+			}
+			l[current] = true
+			k--
+		}
+		fmt.Println(current)
+	}
 
 	defer writer.Flush()
 }
