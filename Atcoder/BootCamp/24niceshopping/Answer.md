@@ -1,5 +1,7 @@
 [問題文](https://atcoder.jp/contests/hitachi2020/tasks/hitachi2020_b)
 
+#入力バッファ
+
 ## 問題文の把握
 
 - A 種類の冷蔵庫と B種類の電子レンジを揃えるお店に買い物にいく
