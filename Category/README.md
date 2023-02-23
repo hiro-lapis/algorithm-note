@@ -8,3 +8,5 @@
   - [binary search](./binarysearch): sort済配列を対象にした配列要素の高速な検索
 - Graph
   - [Disjoint Set Union](./disjointsetunion): graph vertex のグルーピング
+- Math
+  - https://qiita.com/drken/items/a14e9af0ca2d857dad23
