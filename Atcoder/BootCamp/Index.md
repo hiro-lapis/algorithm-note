@@ -18,3 +18,10 @@
 14. C: [Replacing Integer](14replacinginteger/replacinginteger.go)
 15. C: [Divide the Problems](15dividetheproblems/dividetheproblems.go)
 16. C: [Go to School](16gotoschool/gotoschool.go)
+
+
+## Category
+
+- いもす法、部分累積和
+
+[36 prison](./36prison/prison.go)
