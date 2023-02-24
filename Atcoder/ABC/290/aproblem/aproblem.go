@@ -47,9 +47,27 @@ func main() {
 	scanner := getScanner(fp)
 	writer := bufio.NewWriter(wfp)
 
-	// receive input
-	v := getNextInt(scanner)
-	fmt.Println(v)
+	n := getNextInt(scanner)
+	m := getNextInt(scanner)
 
+	a := make([]int, n)
+	b := make([]int, m)
+
+	for i := 0; i < n; i++ {
+		tmp := getNextInt(scanner)
+		a[i] = tmp
+	}
+
+	for j := 0; j < m; j++ {
+		tmp := getNextInt(scanner)
+		tmp--
+		b[j] = tmp
+	}
+
+	ans := 0
+	for _, index := range b {
+		ans += a[index]
+	}
+	fmt.Println(ans)
 	defer writer.Flush()
 }

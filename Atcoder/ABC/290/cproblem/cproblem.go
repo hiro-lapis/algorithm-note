@@ -47,9 +47,38 @@ func main() {
 	scanner := getScanner(fp)
 	writer := bufio.NewWriter(wfp)
 
-	// receive input
-	v := getNextInt(scanner)
-	fmt.Println(v)
+	n := getNextInt(scanner)
+	k := getNextInt(scanner)
+	l := make([]int, n)
+	for i := 0; i < n; i++ {
+		l[i] = getNextInt(scanner)
+	}
 
+	// 各数値の存在を示すmapを作成
+	// length=0 で、追加に応じて拡張
+	m := map[int]bool{}
+	for i := 0; i < n; i++ {
+		m[l[i]] = true
+	}
+
+	/**
+	 * 7 3
+	 * 2 0 2 3 2 1 9
+	 * => map[0:true 1:true 2:true 3:true 9:true]
+	 * fmt.Println(m[7]) => false
+	 */
+	ans := 0
+	// MEXの開始値は0だが、MEX最大値はN+1なのでそこまでの範囲を探索
+	for i := 0; i < n+1 && k > 0; i++ {
+		// 探している値がある場合
+		if m[i] {
+			ans++
+			k--
+			continue
+		}
+		fmt.Println(i)
+		return
+	}
+	fmt.Println(ans)
 	defer writer.Flush()
 }

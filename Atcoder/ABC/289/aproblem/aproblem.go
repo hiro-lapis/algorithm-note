@@ -48,8 +48,16 @@ func main() {
 	writer := bufio.NewWriter(wfp)
 
 	// receive input
-	v := getNextInt(scanner)
-	fmt.Println(v)
+	s := getNextString(scanner)
+	ans := ""
+	for _, char := range s {
+		if char == '1' {
+			ans += string('0')
+		} else {
+			ans += string('1')
+		}
+	}
+	fmt.Println(ans)
 
 	defer writer.Flush()
 }
