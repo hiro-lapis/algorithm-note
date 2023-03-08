@@ -56,3 +56,5 @@ print(answer)
 
 ### tips
 
+- time complexity O(n)
+
