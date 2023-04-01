@@ -1,6 +1,7 @@
 [問題文](https://atcoder.jp/contests/abc059/tasks/abc059_b)
 
 #数値
+#考察
 
 ## 問題文の把握
 
