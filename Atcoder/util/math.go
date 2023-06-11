@@ -57,8 +57,8 @@ func QuotientAndRemainder(dividend, divider int) []int {
 	return r
 }
 
-// abs  5 -> 5, -5 -> 5
-func abs(x int) int {
+// Abs  5 -> 5, -5 -> 5
+func Abs(x int) int {
 	if x >= 0 {
 		return x
 	}
