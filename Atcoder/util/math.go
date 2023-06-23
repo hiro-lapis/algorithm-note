@@ -46,6 +46,14 @@ func Sum(num ...int) int {
 	return sum
 }
 
+func SumSlice(l []int) int {
+	sum := 0
+	for _, v := range l {
+		sum += v
+	}
+	return sum
+}
+
 func IsEven(num int) bool {
 	return num%2 == 0
 }
@@ -57,8 +65,8 @@ func QuotientAndRemainder(dividend, divider int) []int {
 	return r
 }
 
-// abs  5 -> 5, -5 -> 5
-func abs(x int) int {
+// Abs  5 -> 5, -5 -> 5
+func Abs(x int) int {
 	if x >= 0 {
 		return x
 	}

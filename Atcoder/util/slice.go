@@ -13,6 +13,20 @@ func makeSliceI(l int, def int) []int {
 	return slice
 }
 
+// InsertValue スライスの特定のインデックスに新しい値を挿入する関数
+func InsertValue(slice []int, index, value int) []int {
+	// スライスを拡張する
+	slice = append(slice, 0)
+
+	// 指定した位置の要素以降をひとつずつ後ろにずらす
+	copy(slice[index+1:], slice[index:])
+
+	// 新しい値を指定した位置に挿入する
+	slice[index] = value
+
+	return slice
+}
+
 // makeGrid h*wマスのint多次元配列作成
 func makeGrid(h, w int) [][]int {
 	index := make([][]int, h)
@@ -21,6 +35,16 @@ func makeGrid(h, w int) [][]int {
 		index[i] = data[i*w : (i+1)*w]
 	}
 	return index
+}
+
+// CreateAlphabetMap a~zまでの英小文字をキーとし、int型の値を持つマップを作成する関数
+func CreateAlphabetMap() map[string]int {
+	alphabetMap := make(map[string]int)
+	// a~zまでの英小文字を走査してマップに追加
+	for i := 'a'; i <= 'z'; i++ {
+		alphabetMap[string(i)] = 0
+	}
+	return alphabetMap
 }
 
 /* END make slice,grid */

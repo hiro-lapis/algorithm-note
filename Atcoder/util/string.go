@@ -53,3 +53,19 @@ func Split(s string, sep string) []string {
 func SearchIndex(target, needle string) int {
 	return strings.Index(target, needle)
 }
+
+// CountTarget count str appearance count
+func CountTarget(str string, t string) int {
+	count := strings.Count(str, t)
+	return count
+}
+
+// IsLowerCase 小文字のみか判定
+func isLowerCase(str string) bool {
+	for _, char := range str {
+		if char < 'a' || char > 'z' {
+			return false
+		}
+	}
+	return true
+}
