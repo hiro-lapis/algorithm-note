@@ -69,3 +69,37 @@ func isLowerCase(str string) bool {
 	}
 	return true
 }
+
+// IsPalindrome 回文か判定
+func IsPalindrome(s string) bool {
+	s = strings.ToLower(strings.ReplaceAll(s, " ", ""))
+	start := 0
+	end := len(s) - 1
+	for start < end {
+		if s[start] != s[end] {
+
+			return false
+		}
+		start++
+		end--
+	}
+	return true
+}
+
+// StrJoin 文字列の結合
+func StrJoin(s ...string) string {
+	var r string
+	for _, v := range s {
+		r += v
+	}
+	return r
+}
+
+// GetLength 文字数の取得
+func GetLength(s ...string) int {
+	var r int
+	for _, v := range s {
+		r += len(v)
+	}
+	return r
+}
