@@ -31,7 +31,7 @@ func Min(num ...int) int {
 func Max(num ...int) int {
 	max := math.MinInt32
 	for _, v := range num {
-		if v < max {
+		if v > max {
 			max = v
 		}
 	}

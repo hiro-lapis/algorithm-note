@@ -56,11 +56,11 @@ func CreateAlphabetMap() map[string]int {
 func Sort(l []int, o string) []int {
 	if o == "desc" {
 		sort.Slice(l, func(i, j int) bool {
-			return l[i] < l[j]
+			return l[i] > l[j]
 		})
 	} else {
 		sort.Slice(l, func(i, j int) bool {
-			return l[i] > l[j]
+			return l[i] < l[j]
 		})
 	}
 	return l
