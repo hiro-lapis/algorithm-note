@@ -31,7 +31,7 @@ func Min(num ...int) int {
 func Max(num ...int) int {
 	max := math.MinInt32
 	for _, v := range num {
-		if v < max {
+		if v > max {
 			max = v
 		}
 	}
@@ -41,6 +41,14 @@ func Max(num ...int) int {
 func Sum(num ...int) int {
 	sum := 0
 	for _, v := range num {
+		sum += v
+	}
+	return sum
+}
+
+func SumSlice(l []int) int {
+	sum := 0
+	for _, v := range l {
 		sum += v
 	}
 	return sum
@@ -57,8 +65,8 @@ func QuotientAndRemainder(dividend, divider int) []int {
 	return r
 }
 
-// abs  5 -> 5, -5 -> 5
-func abs(x int) int {
+// Abs  5 -> 5, -5 -> 5
+func Abs(x int) int {
 	if x >= 0 {
 		return x
 	}
