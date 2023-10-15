@@ -47,6 +47,11 @@ func CreateAlphabetMap() map[string]int {
 	return alphabetMap
 }
 
+// RemoveI remove slice element of i
+func RemoveI(l []int, i int) []int {
+	return append(l[:i], l[i+1:]...)
+}
+
 /* END make slice,grid */
 
 /* Sort */
