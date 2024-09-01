@@ -51,3 +51,5 @@
 DP問題ばかりのコンテスト
 [競技プログラミングにおける動的計画法問題まとめ はまやん](https://blog.hamayanhamayan.com/entry/2017/02/27/021246)
 DPに関する考察まとめ
+[AtCoder 問題カテゴリー分類](https://qiita.com/c-yan/items/56a051d826b873b4f78d#imos-%E6%B3%95-imos-method)
+カテゴリー幅広く網羅している
