@@ -106,7 +106,10 @@ func FactorialSlice(n int) (l []int) {
 }
 
 // Pow 累乗
-func Pow(p, q int) int {
+// Pow(2, 3) => 8
+// Pow(9, 0.5) => 3
+// Pow(10, 0.5) => 3(3.1622776601683795の切り捨て)
+func Pow(p int, q float64) int {
 	return int(math.Pow(float64(p), float64(q)))
 }
 
